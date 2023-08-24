@@ -1,0 +1,20 @@
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/app.css'%}">
+<body style="background-image:url('{%static 'images/reg2.jpg'%}'); background-repeat: no-repeat;
+background-size: cover;">
+<h1 style="text-align:center;color:	mediumslateblue">User Registration</h1>
+<form method="POST"  class="d-flex justify-content-center mt-3 pt-5 " >
+    {% csrf_token %}
+    <table border="1">
+        {{form.as_table}}
+        <tr>
+          <td><button type="submit" value="save" class="btn btn-secondary mt-4 mb-4 mx-3">Register</button>
+        </td>
+        </tr>
+    </table>
+</div>
+</form>
+</body>

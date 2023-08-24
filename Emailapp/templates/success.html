@@ -1,0 +1,36 @@
+{%include 'navbar.html'%}
+{% comment %} {% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %} {% endcomment %}
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/app.css'%}">
+{%block body%}
+<body style="background-image:url('{%static 'images/bg1.png'%}'); background-repeat: no-repeat;
+  background-size:cover;">
+{% comment %} 
+<h1><a href="/">Go to Email Page</a></h1> {% endcomment %}
+<h1 style="color:red"> yeah! Email send successfully to reciever...</h1>
+<div class="d-flex justify-content-center">
+{% comment %} <img src="{%static 'images/celebration.gif'%}" style="margin:0 0 0 30px;width:700px;height:50px" > {% endcomment %}
+<img src="{%static 'images/bear-boy.gif'%}" >
+</div>
+{% comment %} 
+<table border="1" cellpadding="9">
+    <tr>
+        <th>to</th>
+        <th>subject</th>
+        <th colspan="7">message</th>
+        <th colspan="10"> file</th>
+    <tr>
+
+    {%for i in list%}
+    <tr>
+    <td><h3>{{i.toemail}}</h3></td>
+    <td><h3>{{i.subject}}</h3></td>
+    <td><h3>{{i.messages}}</h3></td>
+    <td>{{i.file}}</td>
+    <tr>
+    {% endfor %} 
+
+  </body> {% endcomment %}
+  {% endblock %}
